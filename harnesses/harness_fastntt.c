@@ -22,7 +22,9 @@ main(void)
 
     m5_reset_stats(0, 0);
     // Pass 6 arguments here
-    fastNTT(data, N, 998244353, twiddle, 1, N);
+    for (int j = 0; j < 10000; j++) {
+        fastNTT(data, N, 998244353, twiddle, 1, N);
+    }
     m5_dump_stats(0, 0);
 
     return 0;
